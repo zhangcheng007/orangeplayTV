@@ -37,13 +37,33 @@ background:#ebebeb;
 
 .main-content .caption {
 
-	height:200px;
+	height:170px;
 }
+
 
 .main-content .caption .julime{
 
 	height:100px;
 }
+
+ .main-content .col-md-3 .img-responsive{
+
+   background-color: #fff;
+
+ }
+.main-content .col-md-3 img{
+   
+    padding: 4px 4px;
+
+}
+
+
+.main-content .col-md-3{
+   
+   padding-bottom: 6px;
+
+}
+
 
 
 .main-navigation ul li{
@@ -51,6 +71,14 @@ background:#ebebeb;
  color: #fff;
 
  padding: 0 10px
+}
+
+
+
+.mypagination li a{
+
+ color:#EE6363;
+ 
 }
 
 
