@@ -100,8 +100,8 @@
 
          <% for(var i=0; i < tv.length; i++) { %>
 		 <div class="col-md-3">		 	
-		      <div class="thumbnail img-rounded">
-		      <img src='<%= tv[i].video_img_url %>' alt='<%= tv[i].video_topic %>'>
+		      <div class="img-responsive img-rounded">
+		      <img src='<%= tv[i].video_img_url %>' alt='<%= tv[i].video_topic %>' height="165px">
 			      <div class="caption">
 			        <h5>  <%= tv[i].video_topic %></h5>
 			        <p class="julime"> <small> <%= tv[i].video_describle %> </small></p>
@@ -125,6 +125,44 @@
          <% } %>
 
 	  </div>
+
+
+       <div class="mypagination">
+    	<nav class="nav navbar-nav navbar-right">
+
+	       <% if (pageCount > 1) { %>
+	        <ul class="pagination pagination-lg">
+	            <% if (currentPage > 1) { %>
+	                <li><a href="/?page=1">&laquo;</a></li>
+	            <% } %>
+	            <% var i = 1;
+	            if (currentPage > 5) {
+	                i = +currentPage - 4;
+	            } %>
+	            <% if (i !== 1) { %>
+	                <li class="disabled"><a href="#">...</a></li>
+	            <% } %>
+	            <% for (i; i<=pageCount; i++) { %>
+	                <% if (currentPage == i) { %>
+	                    <li class="active"><span><%= i %> <span class="sr-only">(current)</span></span></li>
+	                <% } else { %>
+	                    <li><a href="/?page=<%= i %>"><%= i %></a></li>
+	                <% } %>
+	                <% if (i == (+currentPage + 4)) { %>
+	                    <li class="disabled"><a href="#">...</a></li>
+	                <% break; } %>
+	            <% } %>
+	            <% if (currentPage != pageCount) { %>
+	                <li><a href="/?page=<%= pageCount %>">&raquo;</a></li>
+	            <% } %>
+	        </ul>
+	    <% } %>
+	 
+
+       </nav>
+       </div>
+
+
 
 </div>
 </div>
