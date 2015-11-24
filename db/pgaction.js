@@ -31,7 +31,6 @@ DB.prototype.createQuery=function(queryarg,callback){
      });
 }
 
-
 DB.prototype.createInsert=function(table,args,callback){
 
      this.pg.connect(this.conString, function(err, client, done) {
