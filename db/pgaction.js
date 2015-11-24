@@ -7,7 +7,6 @@ function DB(pg,conString) {
 this.pg = pg;
 this.conString = conString;
 };
-
 DB.prototype.createQuery=function(queryarg,callback){
 
      this.pg.connect(this.conString, function(err, client, done) {
