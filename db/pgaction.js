@@ -30,7 +30,7 @@ DB.prototype.createQuery=function(queryarg,callback){
 DB.prototype.createInsert=function(table,args,callback){
 
      this.pg.connect(this.conString, function(err, client, done) {
-
+  //测试
         if(err){
            console.error('error create client from pool', err);
            return callback(err);
