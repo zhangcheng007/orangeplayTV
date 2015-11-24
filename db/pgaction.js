@@ -25,7 +25,6 @@ DB.prototype.createQuery=function(queryarg,callback){
               return callback(err);
             };         
 
-           
             callback(err,result);
         });
      });
