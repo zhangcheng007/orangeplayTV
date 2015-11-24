@@ -24,7 +24,6 @@ DB.prototype.createQuery=function(queryarg,callback){
               console.error('error fetching client from pool', err);
               return callback(err);
             };         
-
             callback(err,result);
         });
      });
