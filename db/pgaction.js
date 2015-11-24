@@ -47,6 +47,7 @@ DB.prototype.createInsert=function(table,args,callback){
      });
 }
 
+
 //var db=new DB(pg,conString);
 module.exports=new DB(pg,conString);
 
