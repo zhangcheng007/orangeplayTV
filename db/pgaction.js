@@ -33,7 +33,6 @@ DB.prototype.createInsert=function(table,args,callback){
      this.pg.connect(this.conString, function(err, client, done) {
 
         if(err){
-
            console.error('error create client from pool', err);
            return callback(err);
         };
